@@ -1,0 +1,41 @@
+src/
+├── app/                           # Routing and pages only
+│   ├── layout.tsx                 # Root layout
+│   ├── page.tsx                   # Homepage
+│   ├── about/
+│   │   └── page.tsx               # About page
+│   ├── contact/
+│   │   └── page.tsx               # Contact page
+│   ├── blog/
+│   │   ├── page.tsx               # Blog list
+│   │   └── [slug]/
+│   │       └── page.tsx           # Dynamic blog post
+│   ├── dashboard/
+│   │   ├── layout.tsx             # Dashboard layout
+│   │   ├── page.tsx               # Dashboard home
+│   │   ├── settings/
+│   │   │   └── page.tsx
+│   │   └── analytics/
+│   │       └── page.tsx
+│   ├── not-found.tsx             # Custom 404
+│   └── components/               # UI components only used within app
+│       ├── Header.tsx
+│       ├── Footer.tsx
+│       ├── Navbar.tsx
+│       └── ...
+│
+├── lib/                          # Utilities & API logic (outside app/)
+│   ├── api.ts
+│   └── helpers.ts
+│
+├── hooks/                        # Custom React hooks
+│   └── useUser.ts
+│
+├── styles/                       # Global CSS or SCSS
+│   └── variables.css
+│
+├── types/                        # TypeScript types/interfaces
+│   └── index.ts
+│
+└── constants/                    # Global constants
+    └── siteConfig.ts
