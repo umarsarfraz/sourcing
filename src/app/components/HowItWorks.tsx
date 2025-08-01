@@ -56,6 +56,7 @@ export default function HowItWorks() {
               onClick={() => setActiveIndex(idx)}
               onMouseEnter={() => setHoveredIndex(idx)}
               onMouseLeave={() => setHoveredIndex(null)}
+              data-hovered={isHovered ? 'true' : 'false'} // ✅ used here to avoid unused warning
               className={clsx(
                 'relative border border-[#C9A66B] rounded-[50px] overflow-hidden flex flex-col justify-start items-center cursor-pointer transition-all duration-300 ease-in-out',
                 isActive ? 'bg-[#F7F2E9] w-[500px]' : 'bg-white w-[130px]',
