@@ -1,3 +1,7 @@
+"use client";
+
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-50 border-t text-sm text-gray-600 mt-20">
@@ -14,10 +18,18 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-4">Navigation</h3>
           <ul className="space-y-2">
-            <li><a href="/" className="hover:text-blue-600 transition-colors">Home</a></li>
-            <li><a href="/services" className="hover:text-blue-600 transition-colors">Services</a></li>
-            <li><a href="/sourcing" className="hover:text-blue-600 transition-colors">Source Products</a></li>
-            <li><a href="/contact" className="hover:text-blue-600 transition-colors">Contact</a></li>
+            <li>
+              <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+            </li>
+            <li>
+              <Link href="/services" className="hover:text-blue-600 transition-colors">Services</Link>
+            </li>
+            <li>
+              <Link href="/sourcing" className="hover:text-blue-600 transition-colors">Source Products</Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-blue-600 transition-colors">Contact</Link>
+            </li>
           </ul>
         </div>
 
@@ -25,15 +37,24 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-4">Account</h3>
           <ul className="space-y-2">
-            <li><a href="/auth/login" className="hover:text-blue-600 transition-colors">Login</a></li>
-            <li><a href="/auth/signup" className="hover:text-blue-600 transition-colors">Sign Up</a></li>
+            <li>
+              <Link href="/auth/login" className="hover:text-blue-600 transition-colors">Login</Link>
+            </li>
+            <li>
+              <Link href="/auth/signup" className="hover:text-blue-600 transition-colors">Sign Up</Link>
+            </li>
           </ul>
         </div>
 
         {/* Contact / Social */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
-          <p className="mb-2">Email: <a href="mailto:info@sourcingagent.com" className="text-blue-600 hover:underline">info@sourcingagent.com</a></p>
+          <p className="mb-2">
+            Email:{" "}
+            <a href="mailto:info@sourcingagent.com" className="text-blue-600 hover:underline">
+              info@sourcingagent.com
+            </a>
+          </p>
           <p className="mb-4">Phone: +86 123 456 7890</p>
           <div className="flex space-x-4">
             <a href="#" className="hover:text-blue-600" aria-label="Facebook">
