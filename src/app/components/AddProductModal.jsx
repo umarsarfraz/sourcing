@@ -20,7 +20,7 @@ export default function AddProductModal({ onClose, onAdd }) {
     }
 
     try {
-      await addDoc(collection(db, 'products'), {
+      await addDoc(collection(db, 'products'), { 
         name,
         description,
         imageUrl,
