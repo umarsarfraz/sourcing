@@ -1,0 +1,25 @@
+# Ignore Firebase backend
+functions/
+firebase.json
+firestore.rules
+storage.rules
+.emulators/
+
+# Ignore logs
+firebase-debug.log
+firebase-debug.*.log
+
+# Ignore test files
+*.test.*
+*.spec.*
+coverage/
+
+# Misc
+*.local
+*.md
+LICENSE
+README.md
+.eslintrc.*
+.prettier.*
+tsconfig.*.json
+.vscode/
