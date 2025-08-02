@@ -1,3 +1,7 @@
 {
-  "ignoreBuildStep": "echo 'Skipping Firebase functions'"
+  "build": {
+    "ignore": [
+      "functions/**"
+    ]
+  }
 }
