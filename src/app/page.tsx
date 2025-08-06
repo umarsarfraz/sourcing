@@ -65,7 +65,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-100">
+    <main className="min-h-screen pt-24 bg-gray-100">
       {/* Hero Section with Animated Text */}
       <div className="text-center py-20 bg-blue-600 text-white">
         <motion.h1

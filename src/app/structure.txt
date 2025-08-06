@@ -1,3 +1,10 @@
+
+
+Sourcing-website
+.next
+functions
+node_modules
+public/img
 src/
 ├── app/                           # Routing and pages only
 │   ├── layout.tsx                 # Root layout
@@ -39,3 +46,15 @@ src/
 │
 └── constants/                    # Global constants
     └── siteConfig.ts
+.env.local
+.gitignore
+.vercelignore
+.enlint.config.mjs
+firebare.json
+next-env.d.ts
+next.config.ts
+pakage-lock.json
+pakage.json
+postcss.config.mjs
+.vercelignore
+tailwind.config.js

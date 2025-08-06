@@ -18,7 +18,7 @@ export default function Navbar() {
   const handleMouseLeave = () => {
     timerRef.current = setTimeout(() => {
       setDropdownOpen(false);
-    }, 200); // delay close
+    }, 200);
   };
 
   return (
@@ -27,9 +27,9 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-blue-600">
           <Image
-            src="/img/chinaprocure-logo.png"
+            src="/img/logo-img.jpg"
             alt="Logo"
-            width={160}
+            width={130}
             height={40}
             priority
           />
@@ -46,7 +46,6 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-6 items-center">
           <Link href="/" className="text-gray-700 hover:text-blue-600">Home</Link>
 
-          {/* Hoverable Dropdown */}
           <div
             className="relative"
             onMouseEnter={handleMouseEnter}
@@ -93,7 +92,9 @@ export default function Navbar() {
       {/* Mobile Nav */}
       {mobileOpen && (
         <div className="md:hidden bg-white shadow-md px-4 pb-6 space-y-3 animate-fade-in-down">
-          <Link href="/" className="block text-gray-700 hover:text-blue-600">Home</Link>
+          <Link href="/" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
+            Home
+          </Link>
 
           {/* Click Dropdown in Mobile */}
           <button
@@ -104,23 +105,34 @@ export default function Navbar() {
           </button>
           {dropdownOpen && (
             <div className="ml-4 space-y-2">
-              <Link href="/aboutus" className="block text-gray-600 hover:text-blue-600">
+              <Link href="/aboutus" className="block text-gray-600 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
                 Why ChinaProcure
               </Link>
-              <Link href="/faq" className="block text-gray-600 hover:text-blue-600">
+              <Link href="/faq" className="block text-gray-600 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
                 FAQ
               </Link>
             </div>
           )}
 
-          <Link href="/services" className="block text-gray-700 hover:text-blue-600">Services</Link>
-          <Link href="/products" className="block text-gray-700 hover:text-blue-600">Products</Link>
-          <Link href="/sourcing" className="block text-gray-700 hover:text-blue-600">Source Products</Link>
-          <Link href="/contact" className="block text-gray-700 hover:text-blue-600">Contact</Link>
-          <Link href="/auth/login" className="block text-gray-700 hover:text-blue-600">Login</Link>
+          <Link href="/services" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
+            Services
+          </Link>
+          <Link href="/products" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
+            Products
+          </Link>
+          <Link href="/sourcing" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
+            Source Products
+          </Link>
+          <Link href="/contact" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
+            Contact
+          </Link>
+          <Link href="/auth/login" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
+            Login
+          </Link>
           <Link
             href="/auth/signup"
             className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mt-2"
+            onClick={() => setMobileOpen(false)}
           >
             Sign Up
           </Link>
