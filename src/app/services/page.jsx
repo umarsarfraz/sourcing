@@ -72,12 +72,13 @@ export default function ServicesPage() {
 
       <div className="text-center mt-20">
         <a
-          href="https://wa.me/YOUR_NUMBER"
-          target="_blank"
-          className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-blue-700 transition"
-        >
-          Get in Touch on WhatsApp
-        </a>
+    href="https://wa.me/8613071024812?text=Hi%2C%20I%27m%20interested%20in%20your%20services"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 text-center"
+  >
+    Contact Us on WhatsApp
+  </a>
       </div>
     </div>
   );

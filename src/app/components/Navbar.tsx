@@ -57,13 +57,13 @@ export default function Navbar() {
             {dropdownOpen && (
               <div className="absolute bg-white shadow-lg rounded-md mt-2 py-2 w-48 animate-fade-in-down z-40">
                 <Link
-                  href="/aboutus"
+                  href="/about/why-us"
                   className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                 >
                   Why ChinaProcure
                 </Link>
                 <Link
-                  href="/faq"
+                  href="/about/faq"
                   className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                 >
                   FAQ
@@ -105,10 +105,10 @@ export default function Navbar() {
           </button>
           {dropdownOpen && (
             <div className="ml-4 space-y-2">
-              <Link href="/aboutus" className="block text-gray-600 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
+              <Link href="/about/why-us" className="block text-gray-600 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
                 Why ChinaProcure
               </Link>
-              <Link href="/faq" className="block text-gray-600 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
+              <Link href="/about/faq" className="block text-gray-600 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
                 FAQ
               </Link>
             </div>
