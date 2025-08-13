@@ -9,6 +9,7 @@ import { auth, db } from '../lib/firebase';
 
 import ProductList from '../components/ProductList';
 import QueryChart from '../components/QueryChart';
+import AddProductModal from '../components/AddProductModal';
 
 export default function AdminPage() {
   const router = useRouter();
@@ -16,6 +17,8 @@ export default function AdminPage() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [tab, setTab] = useState('products');
   const [contacts, setContacts] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [refreshProducts, setRefreshProducts] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
@@ -119,10 +122,33 @@ export default function AdminPage() {
       <main className="p-6">
         {tab === 'products' && (
           <div>
-            <ProductList onEdit={(product) => {
-              // Add your modal or edit form logic here
-              toast(`Edit product: ${product.name}`);
-            }} />
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-semibold">🛒 Manage Products</h2>
+              <button
+                onClick={() => setShowModal(true)}
+                className="bg-green-600 text-white px-4 py-2 rounded"
+              >
+                ➕ Add Product
+              </button>
+            </div>
+
+            <ProductList
+              onEdit={(product) => {
+                toast(`Edit product: ${product.name}`);
+              }}
+              refresh={refreshProducts}
+            />
+
+            {showModal && (
+              <AddProductModal
+                onClose={() => setShowModal(false)}
+                onAdd={() => {
+                  toast.success('Product added!');
+                  setRefreshProducts((prev) => !prev);
+                  setShowModal(false);
+                }}
+              />
+            )}
           </div>
         )}
 

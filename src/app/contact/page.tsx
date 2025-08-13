@@ -50,13 +50,22 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="space-y-16">
+    <div className="">
+     <div className="relative bg-blue-50 pt-20 pb-2.5 px-4 text-center">
+  <h2 className="text-4xl font-bold text-center mb-4 text-blue-600">
+    Get in Touch with Us
+  </h2>
+  <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
+    Whether you want to source products from China or have any questions, we are here to help.  
+    Fill out the form below or reach out to our offices directly, and we will respond as soon as possible.
+  </p>
+</div>
 
       {/* China Office Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 w-full">
         <div className="h-96 w-full">
           <img
-            src="/img/guanzhou.jpg"
+            src="/img/guangzhou.jpg"
             alt="China Office"
             className="w-full h-full object-cover"
           />
@@ -65,9 +74,9 @@ export default function ContactPage() {
           <h2 className="text-3xl font-semibold text-blue-600 mb-4">🇨🇳 China Office</h2>
           <ul className="text-gray-700 space-y-3 text-lg">
             <li><strong>📍 Address:</strong> No. 88 Tianhe Road, Guangzhou</li>
-            <li><strong>📞 WhatsApp:</strong> +86 137 0000 0000</li>
-            <li><strong>💬 WeChat:</strong> china-agent123</li>
-            <li><strong>✉️ Email:</strong> china@sourcingagent.com</li>
+            <li><strong>📞 WhatsApp:</strong> +86 130 7102 4812</li>
+            <li><strong>💬 WeChat:</strong> 13071024812</li>
+            <li><strong>✉️ Email:</strong> info@chinaprocurez.com</li>
           </ul>
         </div>
       </div>
@@ -76,7 +85,7 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 w-full">
         <div className="h-96 w-full">
           <img
-            src="/img/photo-1622546758596-f1f06ba11f58.jpeg"
+            src="/img/lahore.jpeg"
             alt="Pakistan Office"
             className="w-full h-full object-cover"
           />
@@ -84,10 +93,10 @@ export default function ContactPage() {
         <div className="bg-white p-10 flex flex-col justify-center shadow">
           <h2 className="text-3xl font-semibold text-blue-600 mb-4">🇵🇰 Pakistan Office</h2>
           <ul className="text-gray-700 space-y-3 text-lg">
-            <li><strong>📍 Address:</strong> 123 Mall Road, Lahore, Pakistan</li>
-            <li><strong>📞 WhatsApp:</strong> +92 300 1234567</li>
-            <li><strong>💬 WeChat:</strong> pk-agent321</li>
-            <li><strong>✉️ Email:</strong> lahore@sourcingagent.com</li>
+            <li><strong>📍 Address:</strong> A-Block, Phase-6, DHA, Lahore, Pakistan</li>
+            <li><strong>📞 WhatsApp:</strong> +92 309 1945838</li>
+            
+            <li><strong>✉️ Email:</strong> info@chinaprocurez.com</li>
           </ul>
         </div>
       </div>

@@ -41,7 +41,7 @@ export default function ServicesPage() {
 
   return (
     <div className="bg-white py-20 px-6 md:px-12 max-w-7xl mx-auto">
-      <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16">
+      <h1 className="text-4xl font-bold text-center mb-4">
         Our Services
       </h1>
 

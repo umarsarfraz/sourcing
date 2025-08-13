@@ -73,8 +73,7 @@ export default function Navbar() {
           </div>
 
           <Link href="/services" className="text-gray-700 hover:text-blue-600">Services</Link>
-          <Link href="/products" className="text-gray-700 hover:text-blue-600">Products</Link>
-          <Link href="/sourcing" className="text-gray-700 hover:text-blue-600">Source Products</Link>
+          <Link href="/products" className="text-gray-700 hover:text-blue-600">Trending Products</Link>
           <Link href="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
 
           <span className="text-gray-300">|</span>
@@ -118,11 +117,9 @@ export default function Navbar() {
             Services
           </Link>
           <Link href="/products" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
-            Products
+            Trending Products
           </Link>
-          <Link href="/sourcing" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
-            Source Products
-          </Link>
+          
           <Link href="/contact" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileOpen(false)}>
             Contact
           </Link>

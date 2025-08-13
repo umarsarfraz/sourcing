@@ -44,7 +44,7 @@ export default function RootLayout({
 />
 
         <Navbar /> {/* ✅ Navbar at top */}
-        <main className="min-h-screen bg-gray-50">{children}</main>
+        <main className="pt-18 min-h-screen bg-gray-50">{children}</main>
         <Footer /> {/* ✅ Footer at bottom */}
       </body>
     </html>
