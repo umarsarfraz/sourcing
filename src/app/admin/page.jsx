@@ -72,24 +72,17 @@ export default function AdminPage() {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
-      <header className="bg-white shadow flex justify-between items-center px-6 py-4">
+      <header className="bg-white shadow px-6 py-4">
         <h1 className="text-2xl font-bold text-blue-600">Admin Dashboard</h1>
-        <button
-          onClick={handleLogout}
-          className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
-        >
-          Logout
-        </button>
       </header>
 
-      {/* Navigation Tabs */}
-      <nav className="bg-white px-6 shadow">
+      {/* Navigation Tabs + Logout */}
+      <nav className="bg-white px-6 shadow flex items-center justify-between">
+        {/* Tabs */}
         <div className="flex space-x-4 py-3">
           <button
             className={`px-4 py-2 rounded ${
-              tab === 'products'
-                ? 'bg-blue-600 text-white'
-                : 'text-blue-600 hover:bg-blue-100'
+              tab === 'products' ? 'bg-blue-600 text-white' : 'text-blue-600 hover:bg-blue-100'
             }`}
             onClick={() => setTab('products')}
           >
@@ -97,9 +90,7 @@ export default function AdminPage() {
           </button>
           <button
             className={`px-4 py-2 rounded ${
-              tab === 'contacts'
-                ? 'bg-blue-600 text-white'
-                : 'text-blue-600 hover:bg-blue-100'
+              tab === 'contacts' ? 'bg-blue-600 text-white' : 'text-blue-600 hover:bg-blue-100'
             }`}
             onClick={() => setTab('contacts')}
           >
@@ -107,15 +98,21 @@ export default function AdminPage() {
           </button>
           <button
             className={`px-4 py-2 rounded ${
-              tab === 'analytics'
-                ? 'bg-blue-600 text-white'
-                : 'text-blue-600 hover:bg-blue-100'
+              tab === 'analytics' ? 'bg-blue-600 text-white' : 'text-blue-600 hover:bg-blue-100'
             }`}
             onClick={() => setTab('analytics')}
           >
             Analytics
           </button>
         </div>
+
+        {/* Logout button aligned right */}
+        <button
+          onClick={handleLogout}
+          className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
+        >
+          Logout
+        </button>
       </nav>
 
       {/* Content */}
