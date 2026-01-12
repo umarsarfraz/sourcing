@@ -67,32 +67,64 @@ export default function Home() {
   return (
     <main className="min-h-screen pt-14 bg-gray-100">
       {/* Hero Section with Animated Text */}
-      <div className="text-center py-20 bg-blue-600 text-white">
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl font-bold mb-4"
-        >
-          Find the Best Products from China
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-xl"
-        >
-          We help you source high-quality products at the best prices.
-        </motion.p>
-        <motion.button
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-          className="mt-8 px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100"
-        >
-          Get Started
-        </motion.button>
-      </div>
+     <div
+  className="relative bg-cover bg-center min-h-[50vh] md:min-h-[70vh]"
+  style={{ backgroundImage: "url('/img/sq1.jpg')" }}
+>
+  {/* Orange gradient shadow (left side) */}
+  <div className="absolute inset-0 bg-gradient-to-r from-orange-500/80 via-orange-500/40 to-transparent"></div>
+
+  {/* Content */}
+  <div className="relative z-10 max-w-6xl mx-auto h-full flex items-center pt-20 md:pt-28">
+    <div className="w-full md:w-1/2 px-6 md:px-12 text-white flex flex-col gap-4 md:gap-6">
+      
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-4xl md:text-5xl font-bold"
+      >
+        Find the Best Products from China
+      </motion.h1>
+
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-[64px] sm:text-[80px] md:text-[120px] font-extrabold leading-none text-black/90"
+      >
+        2026
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+        className="text-lg md:text-xl text-white"
+      >
+        We help you source high-quality products at the best prices.
+      </motion.p>
+
+      <motion.button
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+        onClick={() => window.location.href = "/contact"}
+        className="px-6 py-3 bg-white text-orange-600 font-semibold rounded-lg hover:bg-black hover:text-white transition-colors duration-300 self-start"
+      >
+        Get Quote
+      </motion.button>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 
       {/* Services Section */}
       <div className="max-w-6xl mx-auto py-16 px-4">
@@ -143,6 +175,43 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Trusted Partners Section */}
+<section className="bg-gray-50 py-14">
+  <div className="max-w-6xl mx-auto px-4 text-center">
+    <h2 className="text-3xl font-bold mb-4">Official Partner</h2>
+    <p className="text-gray-600 mb-10">
+      We work closely with China’s top B2B platforms to ensure reliable suppliers and competitive pricing.
+    </p>
+
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+      <motion.img
+        src="/partner/Alibaba-Logo.png"
+        alt="Alibaba"
+  className="mx-auto h-20"
+  whileHover={{ scale: 1.05 }}
+      />
+      <motion.img
+        src="/partner/1688.png"
+        alt="1688"
+        className="mx-auto h-12  transition"
+        whileHover={{ scale: 1.05 }}
+      />
+      <motion.img
+        src="/partner/mdc.png"
+        alt="Made in China"
+        className="mx-auto h-12 transition"
+        whileHover={{ scale: 1.05 }}
+      />
+      <motion.img
+        src="/partner/44.jpg"
+        alt="IQ Degital"
+        className="mx-auto h-12  transition"
+        whileHover={{ scale: 1.05 }}
+      />
+    </div>
+  </div>
+</section>
+
       <HowItWorks/>
     </main>
   );

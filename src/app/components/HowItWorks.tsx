@@ -8,28 +8,28 @@ const steps = [
   {
     number: '01',
     title: 'SUBMIT INQUIRY',
-    image: '/img/bbb.png',
+    image: '/how/1.jpg',
     description:
       'Reach out via our form or WhatsApp. We quickly understand your sourcing needs and start helping.',
   },
   {
     number: '02',
     title: 'CHOOSE PRODUCTS & BRANDING',
-    image: '/img/bbb.png',
+    image: '/how/2.jpg',
     description:
       'Explore our catalog or share your branding. We help customize your product selection.',
   },
   {
     number: '03',
     title: 'CONFIRM ORDER & TIMELINE',
-    image: '/img/bbb.png',
+    image: '/how/3.jpg',
     description:
       'Confirm details and timeline. We begin sourcing and production after your approval.',
   },
   {
     number: '04',
     title: 'DELIVERY TO YOUR DOORSTEP',
-    image: '/img/bbb.png',
+    image: '/how/4.jpg',
     description:
       'We handle logistics. Your goods are delivered to your location ready for business.',
   },
