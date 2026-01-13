@@ -69,7 +69,7 @@ export default function Home() {
       {/* Hero Section with Animated Text */}
      <div
   className="relative bg-cover bg-center min-h-[50vh] md:min-h-[70vh]"
-  style={{ backgroundImage: "url('/img/sq1.jpg')" }}
+  style={{ backgroundImage: "url('/img/sq1.JPG')" }}
 >
   {/* Orange gradient shadow (left side) */}
   <div className="absolute inset-0 bg-gradient-to-r from-orange-500/80 via-orange-500/40 to-transparent"></div>
