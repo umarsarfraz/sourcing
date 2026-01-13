@@ -36,7 +36,8 @@ const steps = [
 ];
 
 export default function HowItWorks() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
+
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
